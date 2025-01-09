@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import BasicDatePicker from './Calendario'; // Import the updated component
+import BasicDatePicker from './Calendario';
 import '../index.css';
 
 const Hero = () => {
