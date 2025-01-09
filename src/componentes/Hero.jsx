@@ -85,6 +85,7 @@ const Hero = () => {
           <div className="mt-4">
             <h3 className="text-lg font-bold">
               Horas disponibles para {selectedDate.toDateString()}:
+              {console.log(selectedDate.toDateString())}
             </h3>
             {getAvailableHours()}
           </div>

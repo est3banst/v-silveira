@@ -9,7 +9,7 @@ const Section = () => {
     <h2 className='text-slate-900 text-xl py-3 mx-6 border-b-8 border-teal-600 w-max'>Pacientes</h2>
     <hr />
     </div>
-    <div className='w-full h-screen bg-slate-50 flex'>
+    <div className='w-full h-screen bg-slate-50 flex items-center gap-3 flex-col'>
     
     {
     
@@ -41,7 +41,7 @@ const testimonios = [
     },
     {
         name: "Nara",
-        text: "Muy buena atención y profesionalismo. Hace años me atiende y me siento muy conforme tamto con la atención como con los resultados.",
+        text: "Muy buena atención y profesionalismo. Hace años me atiende y me siento muy conforme tanto con la atención como con los resultados.",
     },
 ]
 
