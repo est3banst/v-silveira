@@ -4,7 +4,53 @@ import '../index.css';
 
 const Hero = () => {
   const [selectedDate, setSelectedDate] = useState(null);
+  const [errMsg, setErr] = useState('');
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const API_URL = "http://localhost";
 
+
+ const checkFecha = async () => {
+    
+    if (!selectedDate) {
+      setErr("Debes seleccionar una fecha primero.")
+      return;
+    }
+    
+    setLoading(true);
+    try {
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ fecha: selectedDate.toISOString() }),
+
+      });
+      const result = await response.json();
+      console.log(result)
+      setData(result);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const months = {
+    0: 'Enero',
+    1: 'Febrero',
+    2: 'Marzo',
+    3: 'Abril',
+    4: 'Mayo',
+    5: 'Junio',
+    6: 'Julio',
+    7: 'Agosto',
+    8: 'Setiembre',
+    9: 'Octubre',
+    10: 'Noviembre',
+    11: 'Diciembre'
+  }
   const hoursByDay = {
     0: "Cerrado",
     1: "11 a.m.–7 p.m.",
@@ -14,6 +60,15 @@ const Hero = () => {
     5: "9 a.m.–7 p.m.", 
     6: "Cerrado",
   };
+  const daysSpan = {
+    0 : 'Domingo',
+    1 : 'Lunes',
+    2 : 'Martes',
+    3 : 'Miércoles',
+    4 : 'Jueves',
+    5 : 'Viernes',
+    6 : 'Sábado'
+  }
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
@@ -21,10 +76,10 @@ const Hero = () => {
 
   const getAvailableHours = () => {
     if (!selectedDate) return null;
-
+    
     const dayOfWeek = selectedDate.getDay();
     const hours = hoursByDay[dayOfWeek];
-
+    
     if (hours === "Cerrado") {
       return <p className="text-red-500">No hay turnos disponibles.</p>;
     }
@@ -42,7 +97,7 @@ const Hero = () => {
     }
 
     return (
-      <div className="flex flex-wrap gap-2 mt-4">
+      <div className="flex flex-wrap justify-center gap-2 mt-4">
         {availableTurns.map((turn, index) => (
           <button
             key={index}
@@ -74,25 +129,33 @@ const Hero = () => {
         alt="Background"
       />
 
-      <div className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/50 backdrop-blur-lg p-6 rounded-lg w-full sm:w-3/4 md:w-1/2 lg:w-1/3 shadow-lg">
+      <div className="absolute flex flex-col items-center text-center top-1/2 transform -translate-y-1/2 bg-white/50 backdrop-blur-lg p-6 rounded-lg w-full sm:w-3/4 md:w-1/2 lg:w-1/3 shadow-lg">
        <h4 className='text-xl text-slate-900 text-center py-3'
        >Vení a sonreír nuevamente!</h4>
         <div className="flex flex-col items-center gap-4">
           <BasicDatePicker onChange={handleDateChange} />
-          
+        {!selectedDate && errMsg != '' && (<p className='text-red-500'>{errMsg}</p>)}
         </div>
         {selectedDate && (
           <div className="mt-4">
             <h3 className="text-lg font-bold">
-              Horas disponibles para {selectedDate.toDateString()}:
-              {console.log(selectedDate.toDateString())}
+              Horas disponibles para {
+              daysSpan[selectedDate.getDay()] +" " +selectedDate.toString().split(' ')[2] +' de ' + months[selectedDate.getMonth()]}:
+              {console.log(selectedDate.toISOString())}
             </h3>
             {getAvailableHours()}
           </div>
         )}
-        <button className="w-full m-3 py-2 px-4 bg-[#17C3B2] text-white text-lg font-bold rounded-md hover:bg-[#149e91]">
+        <div>
+      
+    </div>
+        <button
+        onClick={checkFecha}
+        className="w-full m-3 py-2 px-4 bg-[#17C3B2] text-white text-lg font-bold rounded-md hover:bg-[#149e91]">
             Agendá hoy
           </button>
+          {loading && <p>Loading...</p>}
+      {data && <pre>{JSON.stringify(data, null, 2)}</pre>}
       </div>
     </div>
   );

@@ -13,9 +13,11 @@ const Section = () => {
     
     {
     
-    testimonios.map((testimonio) => {
+    testimonios.map((testimonio, key) => {
         return (
-            <Testimonio props={testimonio} />
+            <Testimonio 
+            key={key}
+            props={testimonio} />
         )
 
     })}
