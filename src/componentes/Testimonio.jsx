@@ -3,7 +3,7 @@ import '../index.css'
 
 const Testimonio = ({ props }) => {
     return (
-        <div>
+        <div className=''>
             <div className="card">
                 <div className="header">
                     <div className="image"></div>

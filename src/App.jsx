@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Nav from './componentes/Nav'
 import Hero from './componentes/Hero'
 import Section from './componentes/Section'
+import Services from './componentes/Services'
 
 
 function App() {
@@ -9,9 +10,11 @@ function App() {
 
   return (
     <>
-    <Nav></Nav>
-    <Hero></Hero>
-    <Section></Section>
+    <Nav/>
+    <Hero/>
+    <Services/>
+    <Section/>
+    
 
     </>
   )

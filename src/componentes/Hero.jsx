@@ -7,7 +7,7 @@ const Hero = () => {
   const [errMsg, setErr] = useState('');
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
-  const API_URL = "http://localhost";
+  const API_URL = "http://18.228.42.163/";
 
 
  const checkFecha = async () => {
@@ -140,8 +140,9 @@ const Hero = () => {
           <div className="mt-4">
             <h3 className="text-lg font-bold">
               Horas disponibles para {
-              daysSpan[selectedDate.getDay()] +" " +selectedDate.toString().split(' ')[2] +' de ' + months[selectedDate.getMonth()]}:
-              {console.log(selectedDate.toISOString())}
+              daysSpan[selectedDate.getDay()] 
+              +" " +selectedDate.toString().split(' ')[2] 
+              +' de ' + months[selectedDate.getMonth()]}:
             </h3>
             {getAvailableHours()}
           </div>

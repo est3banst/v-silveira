@@ -70,7 +70,10 @@
   grid-gap: 1rem;
   gap: 1rem;
 }
-
+.custom-shadow {
+  box-shadow: rgba(0, 0, 0, .25) 0 3px 11px 0;
+  border-radius: 6px;
+}
 .header .image {
   height: 4rem;
   width: 4rem;
