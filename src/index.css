@@ -34,6 +34,13 @@
   background: #17C3B2;
  }
  
+ .cust-whatsapp {
+  box-sizing: content-box;
+  background-color: #25d366;
+  border-radius: 12px;
+
+ }
+
  .not-all-buttons::before {
   content: '';
   width: 0;
@@ -73,6 +80,12 @@
 .custom-shadow {
   box-shadow: rgba(0, 0, 0, .25) 0 3px 11px 0;
   border-radius: 6px;
+}
+.custom-shadow img {
+  aspect-ratio: 2/2;
+  width: 65px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 .header .image {
   height: 4rem;

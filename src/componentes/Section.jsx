@@ -5,10 +5,10 @@ const Section = () => {
   return (
 
     <>
-    <div className='bg-slate-50 p-2'>
+    <div className='bg-slate-50 mt-4 p-2'>
     <h2 className='text-slate-900 text-xl py-3 mx-6 border-b-8 border-teal-600 w-max'>Pacientes</h2>
     </div>
-    <div className='w-full h-screen bg-slate-50 flex items-center gap-3 flex-col'>
+    <div className='w-full h-auto bg-slate-50 flex items-center gap-3 flex-col mb-3'>
     
     {
     

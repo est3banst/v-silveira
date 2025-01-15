@@ -1,37 +1,69 @@
-import React from 'react'
+import React from 'react';
+
+const ServiceCard = ({ title, imgSrc, imgAlt, link }) => {
+  return (
+    <section className="w-4/6 md:w-3/6 flex custom-shadow bg-slate-100 hover:scale-[102%] items-center justify-center border-[1px] border-teal-600 p-4 gap-4">
+      <a className="text-center w-full flex flex-col items-center" href={link}>
+        <img src={imgSrc} alt={imgAlt} className="h-24 w-24 object-contain" />
+        <p className="text-slate-700 font-extrabold lg:text-xl">{title}</p>
+      </a>
+    </section>
+  );
+};
 
 const Services = () => {
+  const services = [
+    {
+      title: 'Ortodoncia',
+      imgSrc: 'data:image/png;base64,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',
+      imgAlt: 'Orthodontics icon',
+      link: '#',
+    },
+    {
+      title: 'Limpiezas',
+      imgSrc:
+      'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAADPUlEQVR4nO2WS08TURiGZ6Nu/Af+A3XjP6BL49q/gHNMxA1hpsTEaMCNweBlo+y8VAGDFwIYxGgoA1bElkunltpL2ulEYmmnFElmLHzmDBQapqWnTWhPO+dNvqTttO/7ned8Zzocx8TExMTExNQI6XKbpMsON2dXGQEH4OLsKsOOAHS5TTq88MJ7WxwHXXa4ywIItE1zdpJhxyNQLNsD0GWH23Zj3xLSKXuAqXs/BmU3r7r3Y9gRgE7ZA0zd+9Epe4BpaD+GHY9AsWwPQKfsAYa2fpiYWkWrq3AqkMx2yMmMR1a1rYCqZWQ1IwXUTCcu/NobTW1MLSeNEU9044NXGf68snaadh8iBeOpM7Kq+QKqBiT1I5aCodkIvPZEtr74lQu0+hDvvKxqvsT6JvzLb5sVX9+sHBpNgWsmbIZi8rT5EAMIJLMd2AAHFWTkt4nITy4m4YX7F0z4lCHafIgByMmMp9bA75E/ZuDI12iONp8qJkDL4R/jMcOhBuHI4fIrGTPw5Ux4hzafIxcNAroEAlJARBCMrRGZl6qVvcBBKUydD14biHwCuviLVgAin9j9AoLYwlLNgfN7IzcqBanzKawPBD5eAgDa/0La9azmwMml3ZuOd3SSOp/iNR4JYKf7GkQX5arDFvDfjjsM72ZDkL9xnTofYgAgIjB6RAiF4sRhS4k0DM9FYEgKQ/bubWp9iAGAiEB7OkAcOOFLmKPmH3lPvQ8xgPytTotxfO4b/OsRwOh1mq8Lnw9KETPwb2839T7EAEBElkActD+Wvc79z3EYrmbxqRkAlLlebeON9mEADguaZOfYBKj1PgJKumKgvBfomjli5yjzIQYQWQ5WDPTGUmbgm9kQNIsPMYDckwcH1JW05bqspGHMGzdph1yD0Cw+xABARLDVfwd+j4/D+qvnlms/347B9Kd5UAcel/09jT6lAGxUCm6ZEvisFYCA/PYBgJZLTADfb6MJ6LMCcPLnQUT5hjd3/JUH55WzFgBYIKJHrb/76D5XTnDz8kkQ+KmGN3l89RHa20+UBXAAAT1sseOQxztfcfHFgq6r50Dk7+E7Jgh8joJFVFe4593e+8qeeSYmJiYmJs7W+g/9qXfBlkMjaAAAAABJRU5ErkJggg==',      
+      imgAlt: 'Teeth cleaning icon',
+      link: '#',
+    },
+    {
+      title: 'Implantes',
+      imgSrc:
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAvCAYAAABzJ5OsAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD1ElEQVR4nN2XXWgcVRTHrx9P4kPwRX1RSLH6pq++CFKRYtuAJVXRikLXBCsiTRvo7tx0RRPXfu2diNAkupkrfaimSFqjDbFrP2KpkraS2odiS9J0m5072XvuJuiD4teRsyVSNe3MTnY7E//wfxjmfPzmcOaLsQBCxNs9gCeUNkJp+NoF47kafnXB/OhquOQCDCmA5HSptPxGdaa1ftADSLkAn1/Nq+RTHU8BjFJ96kP9gnD5Qd9SLJlXXA2TCgwGsQsm7xnz6LV16NgF81XwGjDhGZOg/qHAi8XiHUqb/UEb/qO5hj8mr7i5gyNHdhaU7qXjkHU+IY6q4V0wB8I0JE97Mzhy7AQODudxcroYqoaatzafVgVe2e+QzQquVwE/MJzH789fWBw4zF+AfjwwvALoC9PkwtRl/CJ/HA8O5/HcDxdrAw5k6AkOr+FENcUvKw+/OTNemfZnXx7F8xOTNQQ3BD8aGN7VcDbYpAs4fGS0Aj146DAeOzmGU0VVY3BDN+7ZmsNPFK5UgL89M44Xpwo1h1Zh4BWY0/UCCelTVUzeHI4BMP5tbUaCTz7ky6mOa/Nx8MkDbI8VPMC71cA3xwx+bXD4cvn+qIHVNS6Wy/cFhq9cgIbxqKFVxfBdVeBX4c2W6MENusa0VQ1fKpXuVQC/RAz/88zMzD0sjBTAzkinDrCDhdWl2dkGpcFEAq9htjA3dxdbjFxtWiKZujYtbLGi/0gFcPzmros5Gvr/9T/TN2blzYQvAjzJaiVEvNXz5hrJwhkc2vHhfqy1hTM4NN+D+rF6yBJyH7cl1tqWkPvqAvy/gU8J5xFu9z/1b2/clu14YVMX+pni+AL5VJdFpTUbtq5sSqTQzxTH4qYlCc/fyz3Mhcy0ZfYMtPAs+pniuJAZyouanVm27Ax3kzpvszgoLZyG515/q/np1g70M8WlhdPA4qCk/cHdPCubX3uzu+vFze+gnymOZ2Uz5UXNzizh2OGe644dNTtLvz9wZ4ftrGjlIvn8G53oZ4rrsJ0VlBc1O1s3MHBbOptrfKmt8+V1G9PoZ4pLZ3ONlBc1O+O2szvk58CuqNmZ1S2XceG0b+rak0ts3YV+pjgunHbKY3HR0nzDCqedC6ecyvb/lNydQz9THBdOmfKiZqdP5McsIXu3ZPoOvbqtG/1McZaQvZTH4qIluTaW+OhZS8ixVLb/XFum58/NmR68nuk8xVlCjvFu+UzU7Izbcr0l5Gly+/Y+cyN4Oj8fy225nsVJq1r5A00bkr8tuC6J1O+rW5IPsTirKZHae51938virlULTL9eU/8Ly6ur8Lb0dM0AAAAASUVORK5CYII=", 
+      imgAlt: 'Dental implants icon',
+      link: '#',
+    },
+    {
+        title: 'Armonización facial',
+        imgSrc: 
+        "data:image/png;base64,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",
+        imgAlt: 'Dental rest',
+        link: '#',
+    }
+  ];
+
   return (
     <>
-    <hr />
-    <div className='bg-slate-50 mt-2 p-2 h-screen'>
-        <h2 className='text-slate-900 text-xl py-3 mx-6 border-b-8 border-teal-600 w-max'>Servicios</h2>
-        <div className='flex flex-col md:flex-row justify-around h-[70vh] gap-4 items-center'>
-        <section className='w-3/5 flex custom-shadow bg-slate-100 hover:scale-[102%] flex-col-reverse items-center justify-center border-[1px] border-teal-600 p-3 gap-4'>
-            <p className='text-slate-700 font-extrabold md:text-xl'>Ortodoncia</p>
-            <img 
-                src="data:image/png;base64,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"
-                alt="external-teeth-orthodontics-flaticons-flat-flat-icons-5" />
-        </section>
-        <section className='w-3/5 flex bg-slate-100 custom-shadow hover:scale-[102%] flex-col-reverse items-center justify-center border-[1px] border-teal-600 p-3 gap-4'>
-            <p className='text-slate-900 font-extrabold md:text-xl'>Limpiezas</p>
-            <img 
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAADPUlEQVR4nO2WS08TURiGZ6Nu/Af+A3XjP6BL49q/gHNMxA1hpsTEaMCNweBlo+y8VAGDFwIYxGgoA1bElkunltpL2ulEYmmnFElmLHzmDBQapqWnTWhPO+dNvqTttO/7ned8Zzocx8TExMTExNQI6XKbpMsON2dXGQEH4OLsKsOOAHS5TTq88MJ7WxwHXXa4ywIItE1zdpJhxyNQLNsD0GWH23Zj3xLSKXuAqXs/BmU3r7r3Y9gRgE7ZA0zd+9Epe4BpaD+GHY9AsWwPQKfsAYa2fpiYWkWrq3AqkMx2yMmMR1a1rYCqZWQ1IwXUTCcu/NobTW1MLSeNEU9044NXGf68snaadh8iBeOpM7Kq+QKqBiT1I5aCodkIvPZEtr74lQu0+hDvvKxqvsT6JvzLb5sVX9+sHBpNgWsmbIZi8rT5EAMIJLMd2AAHFWTkt4nITy4m4YX7F0z4lCHafIgByMmMp9bA75E/ZuDI12iONp8qJkDL4R/jMcOhBuHI4fIrGTPw5Ux4hzafIxcNAroEAlJARBCMrRGZl6qVvcBBKUydD14biHwCuviLVgAin9j9AoLYwlLNgfN7IzcqBanzKawPBD5eAgDa/0La9azmwMml3ZuOd3SSOp/iNR4JYKf7GkQX5arDFvDfjjsM72ZDkL9xnTofYgAgIjB6RAiF4sRhS4k0DM9FYEgKQ/bubWp9iAGAiEB7OkAcOOFLmKPmH3lPvQ8xgPytTotxfO4b/OsRwOh1mq8Lnw9KETPwb2839T7EAEBElkActD+Wvc79z3EYrmbxqRkAlLlebeON9mEADguaZOfYBKj1PgJKumKgvBfomjli5yjzIQYQWQ5WDPTGUmbgm9kQNIsPMYDckwcH1JW05bqspGHMGzdph1yD0Cw+xABARLDVfwd+j4/D+qvnlms/347B9Kd5UAcel/09jT6lAGxUCm6ZEvisFYCA/PYBgJZLTADfb6MJ6LMCcPLnQUT5hjd3/JUH55WzFgBYIKJHrb/76D5XTnDz8kkQ+KmGN3l89RHa20+UBXAAAT1sseOQxztfcfHFgq6r50Dk7+E7Jgh8joJFVFe4593e+8qeeSYmJiYmJs7W+g/9qXfBlkMjaAAAAABJRU5ErkJggg==" 
-                alt="external-teeth-anatomy-flaticons-flat-flat-icons" />
-        </section>
-        <section className='w-3/5 bg-slate-100 flex custom-shadow hover:scale-[102%] flex-col-reverse items-center justify-center border-[1px] border-teal-600 p-3 gap-4'>
-            <p className='text-slate-900 font-extrabold md:text-xl'>Implantes</p>
-            <img 
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAxCAYAAABznEEcAAAACXBIWXMAAAsTAAALEwEAmpwYAAADWUlEQVR4nNWaS0gVURjHf2ktzd4SIUGkUWS2aFGIWFISUbSIgpKoVZBIbsQ2hht7EGmJIj1ErQhbRBTZQnriIig1MKNFUVlhtcjEXtLL4tBfGMy5zsyde+/xBx8yd77XOfOdM2fOEbwzDdgBnAUeAv3AH+AL8ApoA8qAzHH8LAL2S/+17Iflz/htBrYDqYTIdKAa+KykfwCPgCtAE3AVuO9olJEOYKPDxyRgE9Dp0DH6t4GLQKP89ci/uf8JqFL8qMgF3sjpTWALkOKimwSsBI4CAw6bVcAtXX8ADgHZEWKmKM6IjXlaOUEbsFy9YQKv9Wmbqsb8UiLm7/EIHeBGgeIPjtNw1159IgcZBMPU/nslkEdwMlV6j1WWntmsHtwTMPAK4B3wFVhD9OxVPmZceaZRA8zv4zc9tRv4pnERuJZHMRX4CTTgAzNrvPChP0Ulc1c99hTIIlxearB75p6mOy9sA747pt/qAE/QCz3KKyaNWArUASXAXGJHj99G3FFJ2MQz5eWZy5pebaIfuOTHoEGzga95OYYk6YV5xo/RAQ3UhdhBpvIp92O0XkZm1WoDO5WPWYZ4ZqaWx7XYQZ3ymeHX8AHQBySTWCYDb7Xc982+II8wBmxQHsVBjGfrTXyNxHJdecwK6qBWvZBPYshT/JponMzRh1FHAsZGsuIOqiqioky9UUp8KVVcEz+UHunUB04a8SFN8UKtgHz1ivlEvBEH6VG81YSIWUO1Ah+BIQUY0HVYMiC/Q7pujeXa7ZiChbq5xT9/f+Q/5ow0okI7eWFJRTwbUeLYxYuFlBAn0oEFoyRXSVSNcc8pVdLLHeNeOglmvsc1f7n0jL5VZAOHlVzbOLXfJj2jvwyLOB2w/k9hEckBx0Siv1X+O4ApVHJN2kV3kybpFcrOGpoDlpNpkDXMA4qUWAuwNYK0SK9IdlaRpeQqdUTlJpXSC3vDOWpqApbTCSwiB6hXYu3AkQjSLr36EM8vQmPCv7GLgV7H0e7zCDJyVNwbdBsmVuwCupVcnz5n3aRPet2ys4oJX04FwAUl16U1kZt0Sc/or8MiDmrD18/0Oiw761gM/AbOudw/r/vWvehG06JTHfMfBU4ydPpk7lvPEvV2x6ix0KHfzf0JwUmXcWB+D52/yq6F87G5DlcAAAAASUVORK5CYII=" 
-                alt="external-crown-dentistry-prettycons-lineal-prettycons" />
-        </section>
+      <hr />
+      <div className="bg-slate-50 my-5 p-2 h-auto">
+        <h2 className="text-slate-900 text-xl py-3 mx-6 border-b-8 border-teal-600 w-max">
+          Servicios
+        </h2>
+        <div className="flex w-full flex-col md:flex-row md:flex-wrap justify-around py-4 mb-4 gap-4 items-center">
+          {services.map((service, index) => (
+            <ServiceCard
+              key={index}
+              title={service.title}
+              imgSrc={service.imgSrc}
+              imgAlt={service.imgAlt}
+              link={service.link}
+            />
+          ))}
         </div>
-
-    
-    </div>
-    <hr />
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;
+
