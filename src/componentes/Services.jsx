@@ -47,7 +47,7 @@ const Services = () => {
       <hr />
       <div className="bg-slate-50 my-5 p-2 h-auto">
         <h2 className="text-slate-900 text-xl py-3 mx-6 border-b-8 border-teal-600 w-max">
-          Servicios
+          Procedimientos
         </h2>
         <div className="flex w-full flex-col md:flex-row md:flex-wrap justify-around py-4 mb-4 gap-4 items-center">
           {services.map((service, index) => (

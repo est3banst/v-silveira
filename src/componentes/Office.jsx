@@ -9,6 +9,7 @@ const Office = () => {
       <div className='w-full p-4'>
         <a 
           className='w-full flex'
+          target='_blank'
           href="https://www.google.com/maps/place/Sinton%C3%ADa+dental/@-34.8867113,-56.1265788,18.53z/data=!4m6!3m5!1s0x959f8127c32e3ae3:0x3df93632dfc64a96!8m2!3d-34.8865528!4d-56.1259186!16s%2Fg%2F11hd9nd42k?entry=ttu&g_ep=EgoyMDI1MDExMC4wIKXMDSoASAFQAw%3D%3D">
           <img 
             className='w-full h-auto object-contain'

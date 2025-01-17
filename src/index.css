@@ -40,7 +40,12 @@
   border-radius: 12px;
 
  }
-
+li {  
+  font-size: 1.2rem;
+}
+.hover-footer:hover {
+  background-color: rgb(204, 251, 241);
+}
  .not-all-buttons::before {
   content: '';
   width: 0;

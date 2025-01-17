@@ -15,7 +15,7 @@ const Nav = () => {
 
     return (
         <>
-        <header className={`relative flex text-slate-50 justify-evenly items-center p-3 bg-teal-600 ${isMenuOpen ? 'fixed left-0 z-[770]' : ''}`}>
+            <header className={`relative flex text-slate-50 justify-evenly items-center p-3 bg-teal-600 ${isMenuOpen ? 'fixed left-0 z-[770]' : ''}`}>
                 <div className="flex gap-2 items-center">
                     <h1 className="text-center sm:text-sm md:text-xl lg:text-2xl">Sintonía Dental by Virginia Silveira</h1>
                     <img
@@ -43,42 +43,80 @@ const Nav = () => {
             </header>
             <hr />
             <div
-        className={`fixed left-0 w-full h-screen bg-gray-900 z-[700] text-white transform ${
-          isMenuOpen ? 'translate-x-0' : '-translate-x-full'
-        } transition-transform duration-300`}
-      >
-        <ul className="flex flex-col gap-6 p-6">
-          <li>
-            <button onClick={toggleDropdown} className="w-full text-left">
-              Procedimientos
-            </button>
-            {isDropdownOpen && (
-              <ul className="mt-2 pl-4">
-                <a href="">
+                className={`fixed left-0 w-full h-screen bg-gray-900 z-[700] text-white transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'
+                    } transition-transform duration-300`}
+            >
+                <ul className="respons-menu flex flex-col gap-6 p-6">
+                    <li>
+                        <button onClick={toggleDropdown} className="w-full text-left">
+                            Procedimientos
+                        </button>
+                        {isDropdownOpen && (
+                            <ul className="mt-2 pl-4">
+                                <a href="">
 
-                <li>Limpiezas</li>
-                </a>
-                <a href="">
-                <li>Implantes</li>
+                                    <li>Limpiezas</li>
+                                </a>
+                                <a href="">
+                                    <li>Implantes</li>
 
-                </a>
-                <a href="">
-                <li>Ortodoncia</li>
+                                </a>
+                                <a href="">
+                                    <li>Ortodoncia</li>
 
-                </a>
-              </ul>
-            )}
-          </li>
-          <a href="">
-          <li>La oficina</li>
+                                </a>
+                                <a href="">
+                                    <li>Armonización facial</li>
 
-          </a>
-          <a href="">
-          <li>Contacto</li>
+                                </a>
+                            </ul>
+                        )}
+                    </li>
+                    <a href="">
+                        <li>Pacientes</li>
+                    </a>
+                    <a href="">
+                        <li>La oficina</li>
 
-          </a>
-        </ul>
-      </div>
+                    </a>
+                    <a href="">
+                        <li>Contacto</li>
+
+                    </a>
+                </ul>
+                <section className='mt-4 px-7 flex items-center justify-between w-full'>
+                    <a href="tel:+59896430773">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
+                                <path strokeDasharray="64" strokeDashoffset="64" d="M8 3c0.5 0 2.5 4.5 2.5 5c0 1 -1.5 2 -2 3c-0.5 1 0.5 2 1.5 3c0.39 0.39 2 2 3 1.5c1 -0.5 2 -2 3 -2c0.5 0 5 2 5 2.5c0 2 -1.5 3.5 -3 4c-1.5 0.5 -2.5 0.5 -4.5 0c-2 -0.5 -3.5 -1 -6 -3.5c-2.5 -2.5 -3 -4 -3.5 -6c-0.5 -2 -0.5 -3 0 -4.5c0.5 -1.5 2 -3 4 -3Z">
+                                    <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="64;0" />
+                                    <animateTransform id="lineMdPhoneCallLoop0" fill="freeze" attributeName="transform" begin="0.6s;lineMdPhoneCallLoop0.begin+2.7s" dur="0.5s" type="rotate" values="0 12 12;15 12 12;0 12 12;-12 12 12;0 12 12;12 12 12;0 12 12;-15 12 12;0 12 12" />
+                                </path>
+                                <path strokeDasharray="4" strokeDashoffset="4" d="M15.76 8.28c-0.5 -0.51 -1.1 -0.93 -1.76 -1.24M15.76 8.28c0.49 0.49 0.9 1.08 1.2 1.72">
+                                    <animate fill="freeze" attributeName="strokeDashoffset" begin="lineMdPhoneCallLoop0.begin+0s" dur="2.7s" keyTimes="0;0.111;0.259;0.37;1" values="4;0;0;4;4" />
+                                </path>
+                                <path strokeDasharray="6" strokeDashoffset="6" d="M18.67 5.35c-1 -1 -2.26 -1.73 -3.67 -2.1M18.67 5.35c0.99 1 1.72 2.25 2.08 3.65">
+                                    <animate fill="freeze" attributeName="strokeDashoffset" begin="lineMdPhoneCallLoop0.begin+0.2s" dur="2.7s" keyTimes="0;0.074;0.185;0.333;0.444;1" values="6;6;0;0;6;6" />
+                                </path>
+                            </g>
+                        </svg>
+                    </a>
+
+                    <p>+598 96 430 773</p>
+                    <p>Llámanos hoy!</p>
+
+                </section>
+                <section className='mt-4 px-7 flex items-center justify-between w-full'>
+                    <a target='_blank' href="https://www.google.com/maps?sca_esv=204cf606c36776c7&output=search&q=sintonia+dental&source=lnms&fbs=AEQNm0CbCVgAZ5mWEJDg6aoPVcBgWizR0-0aFOH11Sb5tlNhdwiPJWZFf-MdNGF5cE7ER6mV0KqtwDrg4ZaNCnH8qTtEgSN8HSf8Df0wHS5-7uxYEgXGyhvjRfFWbsnu0Qqk4Eya93dCvrRVLkBW71t2etOumiIdxsoM1JeZFVdKqgtZ6HCWM5b1YX142Ra5kRyzg5cwo8nj&entry=mc&ved=1t:200715&ictx=111">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 100 100">
+                            <path fill="#f61110" d="M50.001 0C33.65 0 20.25 13.36 20.25 29.666c0 6.318 2.018 12.19 5.433 17.016L46.37 82.445c2.897 3.785 4.823 3.066 7.232-.2l22.818-38.83c.46-.834.822-1.722 1.137-2.629a29.3 29.3 0 0 0 2.192-11.12C79.75 13.36 66.354 0 50.001 0m0 13.9c8.806 0 15.808 6.986 15.808 15.766S58.807 45.43 50.001 45.43c-8.805 0-15.81-6.982-15.81-15.763S41.196 13.901 50 13.901" />
+                            <path fill="currentColor" d="m68.913 48.908l-.048.126l.042-.115zM34.006 69.057C19.88 71.053 10 75.828 10 82.857C10 92.325 26.508 100 50 100s40-7.675 40-17.143c0-7.029-9.879-11.804-24.004-13.8l-1.957 3.332C74.685 73.866 82 76.97 82 80.572c0 5.05-14.327 9.143-32 9.143s-32-4.093-32-9.143c-.001-3.59 7.266-6.691 17.945-8.174z" color="currentColor" />
+                        </svg>
+                    </a>
+
+                    <p>Santander 1902 esq. Avenida Italia, Montevideo</p>
+                </section>
+            </div>
         </>
     );
 };
