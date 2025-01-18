@@ -3,6 +3,8 @@ import React , {useState} from 'react'
 const Footer = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+    const year = new Date();
+
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
     };
@@ -14,16 +16,18 @@ const Footer = () => {
 
 
             <footer className='text-slate-800 h-auto flex-col justify-center md:flex-row px-4 my-4 py-4 flex gap-2 md:items-center'>
-                <div className='p-2'>
+                <div className='p-2 flex flex-col items-center'>
+                <small>No esperes más para cuidar de tu salud bucal</small>
                     <a href=""
-                        className='flex items-center' >
+                        className='flex items-center gap-2' >
                         <img
                             className='w-[48px]'
                             src="icons8-dental-checkup-100.png" alt="Sintonia dental icono" />
                         <small className='text-xs md:text-sm'>Vení a sonreir nuevamente!</small>
                     </a>
 
-                    <p className='text-lg font-bold'>Sintonía dental</p>
+                    <p className='text-2xl text-teal-500 border-teal-300 border-b-2 w-max font-bold'>Sintonía Dental</p>
+                    
                 </div>
                 <div className='py-3'>
                     <p className='text-lg w-max font-bold inline-block border-b-2 border-teal-600 pb-1 mb-2'>
@@ -85,13 +89,13 @@ const Footer = () => {
                     <p className='text-lg font-bold inline-block border-b-2 border-teal-600 pb-1 mb-2'>
                         Información de contacto
                     </p>
-                    <section className='flex'>
+                    <section className='flex items-center py-2 gap-3'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
                             <path fill="none" stroke="#306cfe" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M43.75 31.25v8.187a4.166 4.166 0 0 1-4.77 4.167A37.5 37.5 0 0 1 6.541 11.021a4.167 4.167 0 0 1 4.146-4.771h8.062a2.083 2.083 0 0 1 2.083 1.854c.207 2.73.913 5.4 2.084 7.875a2.083 2.083 0 0 1-.875 2.625l-1.792 1.02a2.085 2.085 0 0 0-.687 3.043a29.3 29.3 0 0 0 7.687 7.687a2.083 2.083 0 0 0 3.042-.687l1.02-1.792a2.083 2.083 0 0 1 2.709-.792a22.4 22.4 0 0 0 7.875 2.084a2.083 2.083 0 0 1 1.854 2.083" />
                         </svg>
                         <p>+598 96 430 773</p>
                     </section>
-                    <section className='flex'>
+                    <section className='flex items-center py-2 gap-2'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 72 72">
                             <circle cx="36.446" cy="28.864" r="7.225" fill="#fff" />
                             <path fill="#d22f27" d="M52.573 29.11c0-9.315-7.133-16.892-15.903-16.892s-15.903 7.577-15.903 16.896c.002.465.223 11.609 12.96 31.245a3.46 3.46 0 0 0 2.818 1.934c1.84 0 3.094-2.026 3.216-2.232C52.58 40.414 52.58 29.553 52.573 29.11M36.67 35.914a7.083 7.083 0 1 1 7.083-7.083a7.09 7.09 0 0 1-7.083 7.083" />
@@ -107,6 +111,8 @@ const Footer = () => {
 
 
             </footer>
+            <hr />
+            <div className='text-slate-100 bg-teal-600 py-4 text-center'><small>Sintonía Dental &copy; {year.getFullYear()}</small></div>
         </>
     )
 }

@@ -20,10 +20,10 @@ const Office = () => {
       <section className='text-slate-900 w-full p-4'>
         <h2 className='text-xl'>Horarios de atención</h2>
         <hr className='px-4' />
-        <div className='py-4'>
-        <p>Lunes, martes y jueves: 11:00 AM - 7:00 PM</p>
-        <p>Miércoles : 9:00 AM - 6:00 PM</p>
-        <p>Viernes: 9:00 AM - 7:00 PM</p>
+        <div className='py-4 flex flex-col gap-4'>
+        <p className='underline'>Lunes, martes y jueves: 11:00 AM - 7:00 PM</p>
+        <p className='underline'>Miércoles : 9:00 AM - 6:00 PM</p>
+        <p className='underline'>Viernes: 9:00 AM - 7:00 PM</p>
         </div>
       </section>
     </div>
