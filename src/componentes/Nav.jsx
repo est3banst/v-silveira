@@ -15,7 +15,7 @@ const Nav = () => {
 
     return (
         <>
-            <header className={`relative flex text-slate-50 justify-evenly items-center p-3 bg-teal-600 ${isMenuOpen ? 'fixed left-0 z-[770]' : ''}`}>
+            <header className={`relative flex text-slate-50 justify-evenly items-center md:p-5 p-3 bg-teal-600 ${isMenuOpen ? 'fixed left-0 z-[770]' : ''}`}>
                 <div className="flex gap-2 items-center">
                     <h1 className="text-center sm:text-sm md:text-xl lg:text-2xl">Sintonía Dental by Virginia Silveira</h1>
                     <img
@@ -43,7 +43,7 @@ const Nav = () => {
             </header>
             <hr />
             <div
-                className={`fixed left-0 w-full h-screen bg-gray-900 z-[700] text-white transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'
+                className={`fixed left-0 w-full h-[85vh] flex flex-col justify-around bg-gray-900 z-[700] text-white transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'
                     } transition-transform duration-300`}
             >
                 <ul className="respons-menu flex flex-col gap-6 p-6">
@@ -84,7 +84,7 @@ const Nav = () => {
 
                     </a>
                 </ul>
-                <section className='mt-4 px-7 flex items-center justify-between w-full'>
+                <section className='mt-4 px-7 flex items-center w-full'>
                     <a href="tel:+59896430773">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
                             <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
@@ -102,8 +102,10 @@ const Nav = () => {
                         </svg>
                     </a>
 
+                    <div className='px-4 flex items-start flex-col w-max'>
                     <p>+598 96 430 773</p>
                     <p>Llámanos hoy!</p>
+                    </div>
 
                 </section>
                 <section className='mt-4 px-7 flex items-center justify-between w-full'>
@@ -114,7 +116,7 @@ const Nav = () => {
                         </svg>
                     </a>
 
-                    <p>Santander 1902 esq. Avenida Italia, Montevideo</p>
+                    <p className='px-4'>Santander 1902 esq. Avenida Italia, Montevideo</p>
                 </section>
             </div>
         </>

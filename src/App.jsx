@@ -6,6 +6,7 @@ import Services from './componentes/Services'
 import Office from './componentes/Office'
 import Footer from './componentes/Footer'
 import Whats from './componentes/Whats'
+import About from './componentes/About'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
   
     <Nav/>
     <Hero/>
+    <About />
     <Services/>
     <Section/>
     <Office/>

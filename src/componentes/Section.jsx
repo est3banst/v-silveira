@@ -8,7 +8,7 @@ const Section = () => {
     <div className='bg-slate-50 mt-4 p-2'>
     <h2 className='text-slate-900 text-xl py-3 mx-6 border-b-8 border-teal-600 w-max'>Pacientes</h2>
     </div>
-    <div className='w-full h-auto bg-slate-50 flex items-center gap-3 flex-col mb-3'>
+    <div className='w-full h-auto bg-slate-50 grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 mb-3'>
     
     {
     
@@ -35,6 +35,14 @@ const testimonios = [
     {
         name: "Silvana",
         text: "La Dra. Virginia es la 1, se ha convertido en la dentista de la flia., ya es una amiga. Super dedicada a su profesión, además del constante seguimiento cuando estás en tratamiento. Nos ha llegado a atender durante el fin de semana, por cuestión de horarios, o emergencia.100% Recomendable!!!",
+    },
+    {
+        name:"Ana Laura",
+        text: "Excelente profesional, dedicada y mucha paciencia. Muy prolija. MUY RECOMENDABLE"
+    },
+    {
+        name:"Natalia",
+        text: "Virginia muy recomendable!para adultos y niños. Mi hijo de 9 años adora atenderse con ella. Muy profesional"
     },
     {
         name: "Carina",
