@@ -7,6 +7,7 @@ import Office from './componentes/Office'
 import Footer from './componentes/Footer'
 import Whats from './componentes/Whats'
 import About from './componentes/About'
+import Form from './componentes/Form'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
     <Services/>
     <Section/>
     <Office/>
+    <Form />
     <Footer/>
     <Whats/>
 

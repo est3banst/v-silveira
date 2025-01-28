@@ -12,7 +12,7 @@ const About = () => {
         <div>
         
              <hr />
-        <h2 className='text-slate-900 text-xl py-3 mx-6 w-3/6 md:w-4/5'>Si necesitas un dentista, capacitado y equipado para darte la mejor atención
+        <h2 className='text-slate-900 text-xl py-3 mx-6 w-4/6 md:w-4/5'>Si necesitas un dentista, capacitado y equipado para darte la mejor atención
             para el cuidado y la salud de tu boca, contactá hoy para agendar tu consulta
         </h2>
         <span className='mx-4 flex w-[120px] px-4 justify-center border-b-8 border-teal-600'></span>

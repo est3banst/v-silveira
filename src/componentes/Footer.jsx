@@ -1,4 +1,4 @@
-import React , {useState} from 'react'
+import React, { useState } from 'react'
 
 const Footer = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -17,7 +17,7 @@ const Footer = () => {
 
             <footer className='text-slate-800 h-auto flex-col justify-center md:flex-row px-4 my-4 py-4 flex gap-2 md:items-center'>
                 <div className='p-2 flex flex-col items-center'>
-                <small>No esperes más para cuidar de tu salud bucal</small>
+                    <small>No esperes más para cuidar de tu salud bucal</small>
                     <a href=""
                         className='flex items-center gap-2' >
                         <img
@@ -27,7 +27,7 @@ const Footer = () => {
                     </a>
 
                     <p className='text-2xl text-teal-500 border-teal-300 border-b-2 w-max font-bold'>Sintonía Dental</p>
-                    
+
                 </div>
                 <div className='py-3'>
                     <p className='text-lg w-max font-bold inline-block border-b-2 border-teal-600 pb-1 mb-2'>
@@ -80,9 +80,15 @@ const Footer = () => {
                             )}
                         </li>
 
-                        <li className='hover:bg-teal-100 w-max p-2'>Pacientes</li>
-                        <li className='hover:bg-teal-100 w-max p-2'>Contacto</li>
-                        <li className='hover:bg-teal-100 w-max p-2'>Inicio</li>
+                        <a href="">
+                            <li className='hover:bg-teal-100 w-max p-2'>Pacientes</li>
+                        </a>
+                        <a href="">
+                            <li className='hover:bg-teal-100 w-max p-2'>Contacto</li>
+                        </a>
+                        <a href="">
+                            <li className='hover:bg-teal-100 w-max p-2'>Inicio</li>
+                        </a>
                     </ol>
                 </div>
                 <div className='py-3'>

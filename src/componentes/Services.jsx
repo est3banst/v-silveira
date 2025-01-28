@@ -2,7 +2,7 @@ import React from 'react';
 
 const ServiceCard = ({ title, imgSrc, imgAlt, link }) => {
     return (
-        <section className="flex flex-col items-center custom-shadow bg-slate-100 hover:scale-[102%] border-[1px] border-teal-600 p-5 gap-4 w-5/6">
+        <section className="flex flex-col items-center custom-shadow bg-slate-100 hover:scale-[102%] border-[1px] border-teal-600 p-5 gap-4 m-auto w-4/6">
             <a className="text-center w-full flex flex-col items-center" href={link}>
                 <img src={imgSrc} alt={imgAlt} className="h-24 w-24 object-contain" />
                 <p className="text-slate-700 font-extrabold lg:text-xl">{title}</p>
@@ -56,7 +56,7 @@ const Services = () => {
                     Procedimientos
                 </h2>
                 <div
-                    className="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,_minmax(320px,_1fr))] gap-4 p-4 mb-3 w-full justify-center"
+                    className="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,_minmax(320px,_1fr))] gap-4 p-4 mb-3 w-full place-content-center justify-center"
                 >
                     {services.map((service, index) => (
                         <ServiceCard
