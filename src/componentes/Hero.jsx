@@ -53,11 +53,11 @@ const Hero = () => {
   }
   const hoursByDay = {
     0: "Cerrado",
-    1: "11 a.m.–7 p.m.",
-    2: "11 a.m.–7 p.m.",
+    1: "10 a.m.–7 p.m.",
+    2: "10 a.m.–7 p.m.",
     3: "9 a.m.–6 p.m.",
-    4: "11 a.m.–7 p.m.",
-    5: "9 a.m.–7 p.m.", 
+    4: "10 a.m.–7 p.m.",
+    5: "9 a.m.–6 p.m.", 
     6: "Cerrado",
   };
   const daysSpan = {

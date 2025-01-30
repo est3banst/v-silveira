@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
   return (
     <>
-    <h2 className='text-slate-900 font-bold text-2xl p-3 m-4'>Consultorio odontológico. Con 9 años de experiencia.
+    <h2 className='text-slate-900 font-bold text-2xl p-3 m-4'>Consultorio odontológico.
             
             Estética dental y armonización facial. Ortodoncia, prótesis, blanqueamiento,
              radiografía digital, y más.</h2>

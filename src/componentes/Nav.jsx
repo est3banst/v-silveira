@@ -17,7 +17,7 @@ const Nav = () => {
         <>
             <header className={`relative flex text-slate-50 justify-evenly items-center md:p-5 p-3 bg-teal-600 ${isMenuOpen ? 'fixed left-0 z-[770]' : ''}`}>
                 <div className="flex gap-2 items-center">
-                    <h1 className="text-center sm:text-sm md:text-xl lg:text-2xl">Sintonía Dental by Virginia Silveira</h1>
+                    <h1 className="text-center sm:text-sm md:text-xl lg:text-2xl">Odontología personalizada</h1>
                     <img
                         className="px-1"
                         src="data:image/png;base64,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"
@@ -85,7 +85,7 @@ const Nav = () => {
                     </a>
                 </ul>
                 <section className='mt-4 px-7 flex items-center w-full'>
-                    <a href="tel:+59896430773">
+                    <a href="tel:+477427872">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
                             <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
                                 <path strokeDasharray="64" strokeDashoffset="64" d="M8 3c0.5 0 2.5 4.5 2.5 5c0 1 -1.5 2 -2 3c-0.5 1 0.5 2 1.5 3c0.39 0.39 2 2 3 1.5c1 -0.5 2 -2 3 -2c0.5 0 5 2 5 2.5c0 2 -1.5 3.5 -3 4c-1.5 0.5 -2.5 0.5 -4.5 0c-2 -0.5 -3.5 -1 -6 -3.5c-2.5 -2.5 -3 -4 -3.5 -6c-0.5 -2 -0.5 -3 0 -4.5c0.5 -1.5 2 -3 4 -3Z">
@@ -103,7 +103,7 @@ const Nav = () => {
                     </a>
 
                     <div className='px-4 flex items-start flex-col w-max'>
-                    <p>+598 96 430 773</p>
+                    <p>+87 887 7778</p>
                     <p>Llámanos hoy!</p>
                     </div>
 
@@ -116,7 +116,7 @@ const Nav = () => {
                         </svg>
                     </a>
 
-                    <p className='px-4'>Santander 1902 esq. Avenida Italia, Montevideo</p>
+                    <p className='px-4'>Main 123 esq. Calle Falsa, New York</p>
                 </section>
             </div>
         </>

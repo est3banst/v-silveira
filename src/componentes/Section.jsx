@@ -30,27 +30,23 @@ const Section = () => {
 const testimonios = [
     {
         name: "John",
-        text: "Excelente atención de la Dra. Virginia,me gustaría destacar su dedicación y profesionalismo, agenda consultas sin pasar largas esperas, responde a cualquier duda que tengas sobre los tratamientos y  da opciones que convienen al paciente . Los trabajos que me realizó fueron sin dolores ,con rapidéz y a precios accesibles. Muy recomendado el consultorio Sintonía Dental.",
+        text: "Excelente atención de Odontología personalizada,me gustaría destacar su dedicación y profesionalismo, agendan consultas sin pasar largas esperas, responden a cualquier duda que tengas sobre los tratamientos y dan opciones que convienen al paciente .Los trabajos que me realicé en la clínica fueron sin dolores ,con rapidéz y a precios accesibles. Muy recomendado el consultorio.",
     },
     {
-        name: "Silvana",
-        text: "La Dra. Virginia es la 1, se ha convertido en la dentista de la flia., ya es una amiga. Super dedicada a su profesión, además del constante seguimiento cuando estás en tratamiento. Nos ha llegado a atender durante el fin de semana, por cuestión de horarios, o emergencia.100% Recomendable!!!",
-    },
-    {
-        name:"Ana Laura",
-        text: "Excelente profesional, dedicada y mucha paciencia. Muy prolija. MUY RECOMENDABLE"
+        name:"Maria",
+        text: "Excelentes profesionales, dedicados y mucha paciencia. Muy prolijos. MUY RECOMENDABLE"
     },
     {
         name:"Natalia",
-        text: "Virginia muy recomendable!para adultos y niños. Mi hijo de 9 años adora atenderse con ella. Muy profesional"
+        text: "Odontología personalizada muy recomendable!para adultos y niños. Mi hijo de 9 años adora atenderse con ellos. Muy profesionales"
     },
     {
         name: "Carina",
-        text: "Virginia es una excelente profesional no sólo con adultos sino que mis hijos la aman todos los tratamientos han sido impecables y el trato humano excelente! Super recomiendo!",
+        text: "Excelente equipo de profesionales, no sólo con adultos ya que mis hijos adoran la clínica todos los tratamientos han sido impecables y el trato humano excelente! Super recomiendo!",
     },
     {
         name: "Nara",
-        text: "Muy buena atención y profesionalismo. Hace años me atiende y me siento muy conforme tanto con la atención como con los resultados.",
+        text: "Muy buena atención y profesionalismo. Hace años me atiendo acá y me siento muy conforme tanto con la atención como con los resultados.",
     },
 ]
 
