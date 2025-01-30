@@ -26,7 +26,7 @@ const Footer = () => {
                         <small className='text-xs md:text-sm'>Vení a sonreir nuevamente!</small>
                     </a>
 
-                    <p className='text-2xl text-teal-500 border-teal-300 border-b-2 w-max font-bold'>Sintonía Dental</p>
+                    <p className='text-2xl text-teal-500 border-teal-300 border-b-2 w-max font-bold'>Odontología personalizada</p>
 
                 </div>
                 <div className='py-3'>
@@ -99,7 +99,7 @@ const Footer = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
                             <path fill="none" stroke="#306cfe" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M43.75 31.25v8.187a4.166 4.166 0 0 1-4.77 4.167A37.5 37.5 0 0 1 6.541 11.021a4.167 4.167 0 0 1 4.146-4.771h8.062a2.083 2.083 0 0 1 2.083 1.854c.207 2.73.913 5.4 2.084 7.875a2.083 2.083 0 0 1-.875 2.625l-1.792 1.02a2.085 2.085 0 0 0-.687 3.043a29.3 29.3 0 0 0 7.687 7.687a2.083 2.083 0 0 0 3.042-.687l1.02-1.792a2.083 2.083 0 0 1 2.709-.792a22.4 22.4 0 0 0 7.875 2.084a2.083 2.083 0 0 1 1.854 2.083" />
                         </svg>
-                        <p>+598 96 430 773</p>
+                        <p>+87 887 7778</p>
                     </section>
                     <section className='flex items-center py-2 gap-2'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 72 72">
@@ -111,14 +111,14 @@ const Footer = () => {
                                 <path d="M36.67 35.914a7.083 7.083 0 1 1 7.083-7.083a7.09 7.09 0 0 1-7.083 7.083" />
                             </g>
                         </svg>
-                        <p>Santander 1902 esq. Avenida Italia, Montevideo</p>
+                        <p>Main 123 esq. Calle Falsa, New York</p>
                     </section>
                 </div>
 
 
             </footer>
             <hr />
-            <div className='text-slate-100 bg-teal-600 py-4 text-center'><small>Sintonía Dental &copy; {year.getFullYear()}</small></div>
+            <div className='text-slate-100 bg-teal-600 py-4 text-center'><small>Odontología personalizada &copy; {year.getFullYear()}</small></div>
         </>
     )
 }
