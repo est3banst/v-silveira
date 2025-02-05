@@ -29,10 +29,35 @@ const Nav = () => {
                     className="flex md:hidden w-max">
                     <AnimatedHamburgerButton />
                 </div>
-                <ul className="hidden md:flex gap-4">
-                    <a href="#">
-                        <li>Procedimientos</li>
-                    </a>
+                <ul className="hidden md:flex gap-4 relative">
+                    
+                        <li className=''> <button 
+                        className=''
+                        onClick={toggleDropdown}>
+                            Procedimientos
+                            </button>
+                            {isDropdownOpen && (
+                            <ul className="absolute top-full left-0 bg-teal-600 mt-2 p-2 rounded shadow-lg z-50">
+                                <a href="">
+
+                                    <li>Limpiezas</li>
+                                </a>
+                                <a href="">
+                                    <li>Implantes</li>
+
+                                </a>
+                                <a href="">
+                                    <li>Ortodoncia</li>
+
+                                </a>
+                                <a href="">
+                                    <li>Armonización facial</li>
+
+                                </a>
+                            </ul>
+                        )}
+                            </li>
+                   
                     <a href="#">
                         <li>La oficina</li>
                     </a>

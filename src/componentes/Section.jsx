@@ -8,7 +8,7 @@ const Section = () => {
     <div className='bg-slate-50 mt-4 p-2'>
     <h2 className='text-slate-900 text-xl py-3 mx-6 border-b-8 border-teal-600 w-max'>Pacientes</h2>
     </div>
-    <div className='w-full h-auto bg-slate-50 grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 mb-3'>
+    <div className='w-full h-auto bg-slate-50 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-3 p-4 mb-3'>
     
     {
     

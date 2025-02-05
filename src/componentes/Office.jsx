@@ -17,7 +17,7 @@ const Office = () => {
             alt="Ubicación de la clínica Sintonia Dental" />
         </a>
       </div>
-      <section className='text-slate-900 w-full p-4'>
+      <section className='text-slate-900 w-full flex flex-col items-center p-4'>
         <h2 className='font-bold text-2xl'>Horarios de atención</h2>
         <hr className='px-4' />
         <div className='p-4 flex flex-col gap-4'>

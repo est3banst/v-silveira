@@ -15,7 +15,7 @@ const Footer = () => {
             <hr className='my-3' />
 
 
-            <footer className='text-slate-800 h-auto flex-col justify-center md:flex-row px-4 my-4 py-4 flex gap-2 md:items-center'>
+            <footer className='text-slate-800 h-auto flex-col justify-center md:flex-row px-4 my-4 py-4 flex gap-2 md:items-center md:justify-evenly'>
                 <div className='p-2 flex flex-col items-center'>
                     <small>No esperes más para cuidar de tu salud bucal</small>
                     <a href=""

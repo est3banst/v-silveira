@@ -3,11 +3,11 @@ import React from 'react';
 const Form = () => {
   return (
       <>
-      <div className='flex mx-2 px-2'>
+      <div className='flex mx-2 px-2 justify-center'>
         <h2 className='text-slate-900 border-b-2 text-xl font-light border-teal-600 w-max'>Déjanos tu consulta!</h2>
       </div>
       <hr className='mt-2'/>
-      <form className="form">
+      <form className="form m-auto">
         <div className="flex-form">
           <label>
             <input required type="text" className="input" />
