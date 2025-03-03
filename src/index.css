@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -11,6 +14,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.monts {
+  font-family: 'Montserrat', serif;
 }
 .not-all-buttons {
   padding: 0.8em 1.8em;
@@ -27,8 +33,10 @@
   font-family: inherit;
   color: #17C3B2;
  }
- a >li, li>button {
-  padding: 8px;
+ a >li, li >button {
+  padding: 6px 16px;
+  border-radius: 4px;
+  width: max-content;
  }
  a> li:hover, li>button:hover {
   background: #17C3B2;

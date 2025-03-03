@@ -37,57 +37,66 @@ const Footer = () => {
 
                         <li className='relative'>
                             <button
-                                className='bg-transparent hover:bg-teal-100'
+                                className='bg-transparent py-4 hover:bg-teal-100'
                                 onClick={toggleDropdown}
                             >
                                 Procedimientos
                             </button>
                             {isDropdownOpen && (
                                 <ul className='absolute bg-white border border-slate-300 rounded-md shadow-lg mt-2 p-2 w-max'>
-                                    <li>
+                                    
                                         <a
                                             href="#armonizacion-facial"
                                             className='block px-2 py-1 hover:bg-teal-100'
                                         >
-                                            Armonización facial
+                                           <li> Armonización facial</li>
                                         </a>
-                                    </li>
-                                    <li>
+                                   
+                                    
                                         <a
                                             href="#ortodoncia"
                                             className='block px-2 py-1 hover:bg-teal-100'
                                         >
+                                            <li>
+
                                             Ortodoncia
+                                            </li>
                                         </a>
-                                    </li>
-                                    <li>
+                                    
+                                    
                                         <a
                                             href="#limpiezas"
                                             className='block px-2 py-1 hover:bg-teal-100'
                                         >
+                                            <li>
+
                                             Limpiezas
+                                            </li>
                                         </a>
-                                    </li>
-                                    <li>
+                                    
+                                   
                                         <a
                                             href="#implantes"
                                             className='block px-2 py-1 hover:bg-teal-100'
                                         >
+                                             <li>
+
                                             Implantes
+                                             </li>
                                         </a>
-                                    </li>
+                                    
                                 </ul>
                             )}
                         </li>
 
                         <a href="">
-                            <li className='hover:bg-teal-100 w-max p-2'>Pacientes</li>
+                            <li className='hover:bg-teal-100 w-max p-4'>Pacientes</li>
                         </a>
                         <a href="">
-                            <li className='hover:bg-teal-100 w-max p-2'>Contacto</li>
+                            <li className='hover:bg-teal-100 w-max p-4'>Contacto</li>
                         </a>
                         <a href="">
-                            <li className='hover:bg-teal-100 w-max p-2'>Inicio</li>
+                            <li className='hover:bg-teal-100 w-max p-4'>Inicio</li>
                         </a>
                     </ol>
                 </div>
@@ -118,7 +127,12 @@ const Footer = () => {
 
             </footer>
             <hr />
-            <div className='text-slate-100 bg-teal-600 py-4 text-center'><small>Odontología personalizada &copy; {year.getFullYear()}</small></div>
+            <div className='text-slate-100 bg-teal-600 flex flex-col py-4 text-center'><small>&copy; {year.getFullYear()} Odontología personalizada </small>
+            <div className='flex gap-4 justify-center p-4'>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Términos del servicio</a>
+                </div>
+            </div>
         </>
     )
 }

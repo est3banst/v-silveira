@@ -8,7 +8,7 @@ const Whats = () => {
             className='hover:opacity-95'
             target='_blank'
             href="https://wa.me/+59891632722?text=Hola,%20te%20consulto%20para%20..">
-                <div className="cust-whatsapp p-2 fixed text-slate-50 z-[989] bottom-2 right-2 flex w-max items-center">
+                <div className="cust-whatsapp p-2 fixed text-slate-50 z-[9989] bottom-2 right-2 flex w-max items-center">
                     <svg
                         className=""
                         width="32" height="32" viewBox="0 0 24 24"

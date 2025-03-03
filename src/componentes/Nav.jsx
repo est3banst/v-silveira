@@ -15,9 +15,9 @@ const Nav = () => {
 
     return (
         <>
-            <header className={`relative flex text-slate-50 justify-evenly items-center md:p-5 p-3 bg-teal-600 ${isMenuOpen ? 'fixed left-0 z-[770]' : ''}`}>
-                <div className="flex gap-2 items-center">
-                    <h1 className="text-center sm:text-sm md:text-xl lg:text-2xl">Odontología personalizada</h1>
+            <header className={`fixed flex text-slate-50 justify-between w-full items-center md:p-5 p-3 left-0 z-[770] bg-teal-600`}>
+                <div className="flex gap-2 max-w-72 md:max-w-full items-center">
+                    <h1 className="text-center monts uppercase sm:text-sm md:text-xl font-black lg:text-2xl">Odontología personalizada</h1>
                     <img
                         className="px-1"
                         src="data:image/png;base64,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"
@@ -26,7 +26,7 @@ const Nav = () => {
                 </div>
                 <div
                     onClick={toggleMenu}
-                    className="flex md:hidden w-max">
+                    className="flex relative md:hidden mr-5">
                     <AnimatedHamburgerButton />
                 </div>
                 <ul className="hidden md:flex gap-4 relative">
@@ -68,12 +68,12 @@ const Nav = () => {
             </header>
             <hr />
             <div
-                className={`fixed left-0 w-full h-[85vh] flex flex-col justify-around bg-gray-900 z-[700] text-white transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'
+                className={`fixed left-0 w-full h-screen pt-24 flex flex-col justify-around bg-gray-900 z-[700] text-white transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'
                     } transition-transform duration-300`}
             >
                 <ul className="respons-menu flex flex-col gap-6 p-6">
                     <li>
-                        <button onClick={toggleDropdown} className="w-full text-left">
+                        <button onClick={toggleDropdown} className="text-left">
                             Procedimientos
                         </button>
                         {isDropdownOpen && (
@@ -109,7 +109,8 @@ const Nav = () => {
 
                     </a>
                 </ul>
-                <section className='mt-4 px-7 flex items-center w-full'>
+                <div className='flex h-auto flex-col justify-center'>
+                <section className='mt-4 px-7 flex items-center justify-start w-full'>
                     <a href="tel:+477427872">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
                             <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
@@ -133,7 +134,7 @@ const Nav = () => {
                     </div>
 
                 </section>
-                <section className='mt-4 px-7 flex items-center justify-between w-full'>
+                <section className='mt-4 px-7 flex items-center justify-start w-full'>
                     <a target='_blank' href="https://www.google.com/maps?sca_esv=204cf606c36776c7&output=search&q=sintonia+dental&source=lnms&fbs=AEQNm0CbCVgAZ5mWEJDg6aoPVcBgWizR0-0aFOH11Sb5tlNhdwiPJWZFf-MdNGF5cE7ER6mV0KqtwDrg4ZaNCnH8qTtEgSN8HSf8Df0wHS5-7uxYEgXGyhvjRfFWbsnu0Qqk4Eya93dCvrRVLkBW71t2etOumiIdxsoM1JeZFVdKqgtZ6HCWM5b1YX142Ra5kRyzg5cwo8nj&entry=mc&ved=1t:200715&ictx=111">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 100 100">
                             <path fill="#f61110" d="M50.001 0C33.65 0 20.25 13.36 20.25 29.666c0 6.318 2.018 12.19 5.433 17.016L46.37 82.445c2.897 3.785 4.823 3.066 7.232-.2l22.818-38.83c.46-.834.822-1.722 1.137-2.629a29.3 29.3 0 0 0 2.192-11.12C79.75 13.36 66.354 0 50.001 0m0 13.9c8.806 0 15.808 6.986 15.808 15.766S58.807 45.43 50.001 45.43c-8.805 0-15.81-6.982-15.81-15.763S41.196 13.901 50 13.901" />
@@ -143,6 +144,7 @@ const Nav = () => {
 
                     <p className='px-4'>Main 123 esq. Calle Falsa, New York</p>
                 </section>
+                </div>
             </div>
         </>
     );
