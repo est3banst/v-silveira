@@ -15,6 +15,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+* {
+  scrollbar-width: 6px;
+  scrollbar-color: #17C3B2 #f2f2f2;
+}
 .monts {
   font-family: 'Montserrat', serif;
 }
