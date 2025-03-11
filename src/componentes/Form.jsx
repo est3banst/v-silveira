@@ -60,7 +60,10 @@ const Form = () => {
                 <h2 className='font-black'>Esta aplicación es una demostración, no se enviará ningun dato</h2>
                 <p className='font-semibold'>Necesitas un tipo de solución como esta para tu negocio?</p>
                 <p className='font-semibold'>Podemos construirla acorde a tu negocio y sus necesidades especificas</p>
-                <a className='border bg-[#f2f2f248] hover:scale-105 transition-all duration-150 ease-out border-slate-600 p-3 mx-2 text-center' href='https://kustomdev.com'>Visitar Kustom</a>
+                <a className='border bg-[#f2f2f248] hover:scale-105 transition-all duration-150 ease-out border-slate-600 p-3 mx-2 text-center' href='https://kustomdev.com' 
+                 target='_blank' 
+                 rel='noopener noreferrer'
+                 onClick={(e) => e.stopPropagation()}>Visitar Kustom</a>
                 <button 
                 onClick={handleBtnModal}
                 className='border bg-[#f2f2f248] border-slate-600 p-3 mx-2'  >Quizás después</button>
