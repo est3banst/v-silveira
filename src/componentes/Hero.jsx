@@ -6,6 +6,7 @@ const Hero = () => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedHour, setSelectedHour] = useState(null);
   const [errMsg, setErr] = useState('');
+  const [modalOpen, setModalOpen] = useState(false);
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [userInfo, setUserInfo] = useState({ nombre: '', correo: '', telefono: '' });
@@ -22,6 +23,10 @@ const Hero = () => {
   const handleInputChange = (e) => {
     setUserInfo({ ...userInfo, [e.target.name]: e.target.value });
   };
+  const handleBtnModal = (ev) => {
+    ev.preventDefault();
+    setModalOpen(!modalOpen);
+  }
 
   const checkFecha = async () => {
     if (!selectedDate || !selectedHour) {
@@ -38,7 +43,7 @@ const Hero = () => {
       });
 
       const result = await response.json();
-      console.log(result);
+ 
       setData(result);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -117,7 +122,7 @@ const Hero = () => {
         {selectedHour && (
           <div className="mt-4 w-full">
             <h3 className="text-lg text-left my-2 text-slate-700 font-bold">Tus datos de contacto:</h3>
-            <form className="flex flex-col gap-2">
+             <form className="flex flex-col gap-2">
               <input type="text" hidden value={selectedHour} name="fecha_sel" onChange={handleInputChange} />
               <input
                 type="text"
@@ -143,15 +148,16 @@ const Hero = () => {
                 onChange={handleInputChange}
                 className="border p-2 rounded-md w-full"
               />
+              <small className='text-slate-900'>Recibiras la confirmación de tu reserva en tu correo</small>
+           
               <button
-              type="submit"
-              onClick={checkFecha}
+              onClick={handleBtnModal}
               className="w-full mt-3 py-2 px-4 bg-[#17C3B2] text-white text-lg font-bold rounded-md hover:bg-[#149e91]"
             >
               Agendá hoy
             </button>
             </form>
-
+          
             
           </div>
         )}
@@ -159,6 +165,30 @@ const Hero = () => {
         {loading && <p>Loading...</p>}
         {data && <pre>{JSON.stringify(data, null, 2)}</pre>}
       </div>
+      {modalOpen && (
+        <div 
+        onClick={handleBtnModal}
+        className='h-screen w-full flex inset-0 fixed top-0 z-[99232] justify-center left-0 bg-[#020202cd]'>
+        <div className='relative z-[-1] w-3/6 h-2/3 my-auto text-slate-50'>
+            <section className='text-xl p-6 flex flex-col relative z-50 bg-[#24242442] backdrop-blur-sm rounded-2xl gap-4 my-4'>
+               <span 
+               onClick={handleBtnModal}
+               className='absolute top-0 right-0 cursor-pointer'>
+               <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24">
+                    <path fill="currentColor" d="m6.4 18.308l-.708-.708l5.6-5.6l-5.6-5.6l.708-.708l5.6 5.6l5.6-5.6l.708.708l-5.6 5.6l5.6 5.6l-.708.708l-5.6-5.6z"></path>
+                </svg>
+               </span>
+                <h2 className='font-black'>Esta aplicación es una demostración, no se enviará ningun dato</h2>
+                <p className='font-semibold'>Necesitas un tipo de solución como esta para tu negocio?</p>
+                <p className='font-semibold'>Podemos construirla acorde a tu negocio y sus necesidades especificas</p>
+                <a className='border bg-[#f2f2f248] hover:scale-105 transition-all duration-150 ease-out border-slate-600 p-3 mx-2 text-center' href='https://kustomdev.com'>Visitar Kustom</a>
+                <button 
+                onClick={handleBtnModal}
+                className='border bg-[#f2f2f248] border-slate-600 p-3 mx-2'  >Quizás después</button>
+            </section>
+        </div>
+    </div>
+      ) }
     </div>
   );
 };

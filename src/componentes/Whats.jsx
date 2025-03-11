@@ -9,6 +9,7 @@ const Whats = () => {
             target='_blank'
             href="https://wa.me/+59891632722?text=Hola,%20te%20consulto%20para%20..">
                 <div className="cust-whatsapp p-2 fixed text-slate-50 z-[9989] bottom-2 right-2 flex w-max items-center">
+                  <div className='absolute left-0 -top-1 bg-red-600 rounded-full w-[18px] h-[18px] custom-anim transition-all duration-500 font-extralight text-xs flex justify-center items-center'>1</div>
                     <svg
                         className=""
                         width="32" height="32" viewBox="0 0 24 24"

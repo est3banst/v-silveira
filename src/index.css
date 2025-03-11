@@ -22,6 +22,11 @@
 .monts {
   font-family: 'Montserrat', serif;
 }
+.custom-background {
+  background: linear-gradient(135deg, #be89d7 16.66%, transparent 0 83.33%, #be89d7 0), conic-gradient(from 45deg at 66.66% 33.33%, #323132 135deg, rgba(50,49,50,0.75) 0% 225deg, rgba(50,49,50,0.5) 0%);
+background-size: 64px 64px;
+background-color: #be89d7;
+}
 .not-all-buttons {
   padding: 0.8em 1.8em;
   display: block;
@@ -38,14 +43,32 @@
   color: #17C3B2;
  }
  a >li, li >button {
-  padding: 6px 16px;
-  border-radius: 4px;
   width: max-content;
  }
  a> li:hover, li>button:hover {
   background: #17C3B2;
  }
- 
+ .custom-anim {
+  animation: messagePop 0.8s ease-out;
+}
+
+@keyframes messagePop {
+  0% {
+    transform: translateY(100%) scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-5px) scale(1.1);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(-2px);
+  }
+}
+
  .cust-whatsapp {
   box-sizing: content-box;
   background-color: #25d366;
@@ -182,7 +205,7 @@ li {
   position: absolute;
   left: 10px;
   top: 15px;
-  color: grey;
+  color: black;
   font-size: 0.9em;
   cursor: text;
   transition: 0.3s ease;
@@ -241,7 +264,7 @@ li {
   border: 2px solid #cacaca;
   border-radius: 0px;
   box-sizing: border-box;
-  color: #fff;
+  color: #000;
   cursor: pointer;
   display: inline-block;
   font-weight: 390;

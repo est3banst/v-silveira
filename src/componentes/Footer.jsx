@@ -22,7 +22,7 @@ const Footer = () => {
                         className='flex items-center gap-2' >
                         <img
                             className='w-[48px]'
-                            src="icons8-dental-checkup-100.png" alt="Sintonia dental icono" />
+                            src="dent-checkup.png" alt="Sintonia dental icono" />
                         <small className='text-xs md:text-sm'>Vení a sonreir nuevamente!</small>
                     </a>
 
@@ -37,7 +37,7 @@ const Footer = () => {
 
                         <li className='relative'>
                             <button
-                                className='bg-transparent py-4 hover:bg-teal-100'
+                                className='bg-transparent p-2 hover:bg-teal-100'
                                 onClick={toggleDropdown}
                             >
                                 Procedimientos
@@ -90,13 +90,13 @@ const Footer = () => {
                         </li>
 
                         <a href="">
-                            <li className='hover:bg-teal-100 w-max p-4'>Pacientes</li>
+                            <li className='hover:bg-teal-100 w-max p-2'>Pacientes</li>
                         </a>
                         <a href="">
-                            <li className='hover:bg-teal-100 w-max p-4'>Contacto</li>
+                            <li className='hover:bg-teal-100 w-max p-2'>Contacto</li>
                         </a>
                         <a href="">
-                            <li className='hover:bg-teal-100 w-max p-4'>Inicio</li>
+                            <li className='hover:bg-teal-100 w-max p-2'>Inicio</li>
                         </a>
                     </ol>
                 </div>
@@ -128,7 +128,7 @@ const Footer = () => {
             </footer>
             <hr />
             <div className='text-slate-100 bg-teal-600 flex flex-col py-4 text-center'><small>&copy; {year.getFullYear()} Odontología personalizada </small>
-            <div className='flex gap-4 justify-center p-4'>
+            <div className='flex gap-4 justify-center text-xs p-4'>
                 <a href="#">Política de privacidad</a>
                 <a href="#">Términos del servicio</a>
                 </div>

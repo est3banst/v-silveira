@@ -32,7 +32,7 @@ const Nav = () => {
                 <ul className="hidden md:flex gap-4 relative">
                     
                         <li className=''> <button 
-                        className=''
+                        className='p-2 rounded-lg'
                         onClick={toggleDropdown}>
                             Procedimientos
                             </button>
@@ -40,18 +40,18 @@ const Nav = () => {
                             <ul className="absolute top-full left-0 bg-teal-600 mt-2 p-2 rounded shadow-lg z-50">
                                 <a href="">
 
-                                    <li>Limpiezas</li>
+                                    <li className='p-2 rounded-lg'>Limpiezas</li>
                                 </a>
                                 <a href="">
-                                    <li>Implantes</li>
+                                    <li className='p-2 rounded-lg'>Implantes</li>
 
                                 </a>
                                 <a href="">
-                                    <li>Ortodoncia</li>
+                                    <li className='p-2 rounded-lg'>Ortodoncia</li>
 
                                 </a>
                                 <a href="">
-                                    <li>Armonización facial</li>
+                                    <li className='p-2 rounded-lg'>Bruxismo</li>
 
                                 </a>
                             </ul>
@@ -59,10 +59,10 @@ const Nav = () => {
                             </li>
                    
                     <a href="#">
-                        <li>La oficina</li>
+                        <li className='p-2 rounded-lg'>La oficina</li>
                     </a>
                     <a href="#">
-                        <li>Contacto</li>
+                        <li className='p-2 rounded-lg'>Contacto</li>
                     </a>
                 </ul>
             </header>
@@ -72,40 +72,40 @@ const Nav = () => {
                     } transition-transform duration-300`}
             >
                 <ul className="respons-menu flex flex-col gap-6 p-6">
-                    <li>
-                        <button onClick={toggleDropdown} className="text-left">
+                    <li className=''>
+                        <button onClick={toggleDropdown} className="text-left rounded-lg p-2">
                             Procedimientos
                         </button>
                         {isDropdownOpen && (
                             <ul className="mt-2 pl-4">
-                                <a href="">
+                                <a href="#">
 
-                                    <li>Limpiezas</li>
+                                    <li className='p-2 rounded-lg'>Limpiezas</li>
                                 </a>
-                                <a href="">
-                                    <li>Implantes</li>
-
-                                </a>
-                                <a href="">
-                                    <li>Ortodoncia</li>
+                                <a href="#">
+                                    <li className='p-2 rounded-lg'>Implantes</li>
 
                                 </a>
-                                <a href="">
-                                    <li>Armonización facial</li>
+                                <a href="#">
+                                    <li className='p-2 rounded-lg'>Ortodoncia</li>
+
+                                </a>
+                                <a href="#">
+                                    <li className='p-2 rounded-lg'>Bruxismo</li>
 
                                 </a>
                             </ul>
                         )}
                     </li>
-                    <a href="">
-                        <li>Pacientes</li>
+                    <a  href="#">
+                        <li className="p-2 rounded-lg">Pacientes</li>
                     </a>
-                    <a href="">
-                        <li>La oficina</li>
+                    <a  href="#">
+                        <li className="p-2 rounded-lg">La oficina</li>
 
                     </a>
-                    <a href="">
-                        <li>Contacto</li>
+                    <a  href="#">
+                        <li className="p-2 rounded-lg">Contacto</li>
 
                     </a>
                 </ul>
