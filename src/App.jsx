@@ -16,6 +16,7 @@ function App() {
   return (
     <>
   
+    <div className='w-full flex flex-col overflow-hidden'>
     <Nav/>
     <Hero/>
     <About />
@@ -25,6 +26,7 @@ function App() {
     <Form />
     <Footer/>
     <Whats/>
+    </div>
 
 
 
