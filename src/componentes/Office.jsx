@@ -17,7 +17,8 @@ const Office = () => {
           <a href="https://www.openstreetmap.org/?mlat=-34.89462&amp;mlon=-56.16996#map=16/-34.89462/-56.16996&amp;layers=N">Ver mapa completo</a>
       </small>
       </div>
-      <section className='text-slate-900 w-full flex flex-col items-center p-4'>
+      <section className='text-slate-900 w-full flex flex-col gap-4 items-center p-4'>
+        
         <h2 className='font-black monts text-2xl'>Horarios de atención</h2>
         <hr className='px-4' />
         <div className='p-4 flex flex-col gap-4'>
@@ -25,6 +26,15 @@ const Office = () => {
         <p className='text-base underline'>Miércoles, Viernes : 9:00 AM - 6:00 PM</p>
         
         </div>
+        <span className='flex items-center gap-3'>
+        <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24">
+	<path fill="currentColor" d="M3 19V5h18v14zm9-6.884L4 6.885V18h16V6.885zM12 11l7.692-5H4.308zM4 6.885V6v12z"></path>
+</svg>
+          <a 
+          className='underline'
+          href='mailto:info@kustomdev.com?subject=Reservas-Odontologicas'>info@odontologiapersonal.com</a>
+          <p></p>
+        </span>
       </section>
       </div>
     </div>

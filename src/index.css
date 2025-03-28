@@ -171,7 +171,7 @@ li {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 350px;
+  max-width: 550px;
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
@@ -366,15 +366,3 @@ li {
 }
 /*  */
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}

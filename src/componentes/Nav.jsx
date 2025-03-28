@@ -129,7 +129,7 @@ const Nav = () => {
                     </a>
 
                     <div className='px-4 flex items-start flex-col w-max'>
-                    <p>+87 887 7778</p>
+                    <p>(598) 91 63 27 22</p>
                     <p>Llámanos hoy!</p>
                     </div>
 
@@ -142,7 +142,7 @@ const Nav = () => {
                         </svg>
                     </a>
 
-                    <p className='px-4'>Main 123 esq. Calle Falsa, New York</p>
+                    <p className='px-4'>Juan Paullier 123 esq. La Paz , Montevideo</p>
                 </section>
                 </div>
             </div>
