@@ -8,15 +8,14 @@ const Office = () => {
       <h2 className='text-slate-900 text-xl py-3 mx-4 border-b-8 border-teal-600 w-max'>La oficina</h2>
       <div className='flex flex-col md:flex-row justify-center items-center'>
       <div className='w-full my-4'>
-        <a 
-          className='w-full flex'
-          target='_blank'
-          href="https://www.google.com/maps/place/Sinton%C3%ADa+dental/@-34.8867113,-56.1265788,18.53z/data=!4m6!3m5!1s0x959f8127c32e3ae3:0x3df93632dfc64a96!8m2!3d-34.8865528!4d-56.1259186!16s%2Fg%2F11hd9nd42k?entry=ttu&g_ep=EgoyMDI1MDExMC4wIKXMDSoASAFQAw%3D%3D">
-          <img 
-            className='max-w-md h-auto object-contain'
-            src="new_map.png" 
-            alt="Ubicación de la clínica Odontológica" />
-        </a>
+      <iframe 
+      width="100%" 
+      height="350" 
+      src="https://www.openstreetmap.org/export/embed.html?bbox=-56.1827301979065%2C-34.90043334957238%2C-56.157195568084724%2C-34.88879994561951&amp;layer=mapnik&amp;marker=-34.89461685352922%2C-56.169962882995605" style={{ border: '1px solid black' }}>
+        </iframe><br/>
+        <small>
+          <a href="https://www.openstreetmap.org/?mlat=-34.89462&amp;mlon=-56.16996#map=16/-34.89462/-56.16996&amp;layers=N">Ver mapa completo</a>
+      </small>
       </div>
       <section className='text-slate-900 w-full flex flex-col items-center p-4'>
         <h2 className='font-black monts text-2xl'>Horarios de atención</h2>
